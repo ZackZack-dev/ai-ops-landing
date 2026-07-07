@@ -7,79 +7,91 @@
 <style>
   @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
   * { margin: 0; padding: 0; box-sizing: border-box; }
-  body { font-family: 'Inter', -apple-system, sans-serif; background: #0a0a0a; color: #e0e0e0; line-height: 1.6; }
+  body { font-family: 'Inter', -apple-system, sans-serif; background: #0a0a0a; color: #e0e0e0; line-height: 1.65; }
 
-  .container { max-width: 800px; margin: 0 auto; padding: 0 24px; }
+  .container { max-width: 860px; margin: 0 auto; padding: 0 28px; }
 
   /* Hero */
-  .hero { padding: 100px 0 60px; text-align: center; }
-  .hero-badge { display: inline-block; background: rgba(51,204,255,0.08); color: #33ccff; border: 1px solid rgba(51,204,255,0.15); padding: 6px 18px; border-radius: 20px; font-size: 12px; font-weight: 600; margin-bottom: 28px; letter-spacing: 1.5px; text-transform: uppercase; }
-  .hero h1 { font-size: 44px; font-weight: 900; line-height: 1.1; margin-bottom: 20px; letter-spacing: -1.5px; }
+  .hero { padding: 120px 0 70px; text-align: center; }
+  .hero-badge { display: inline-block; background: rgba(51,204,255,0.08); color: #33ccff; border: 1px solid rgba(51,204,255,0.15); padding: 8px 22px; border-radius: 22px; font-size: 14px; font-weight: 600; margin-bottom: 32px; letter-spacing: 1.5px; text-transform: uppercase; }
+  .hero h1 { font-size: 56px; font-weight: 900; line-height: 1.08; margin-bottom: 24px; letter-spacing: -2px; }
   .hero h1 .highlight { background: linear-gradient(135deg, #33ccff, #7b61ff); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
-  .hero p { font-size: 18px; color: #888; max-width: 520px; margin: 0 auto 40px; }
+  .hero p { font-size: 21px; color: #999; max-width: 580px; margin: 0 auto 48px; }
 
-  .price-block { margin-bottom: 40px; }
-  .price-block .dollar { font-size: 48px; font-weight: 900; color: #fff; letter-spacing: -2px; }
-  .price-block .label { font-size: 14px; color: #555; display: block; margin-top: 4px; }
+  .price-block { margin-bottom: 44px; }
+  .price-block .dollar { font-size: 64px; font-weight: 900; color: #fff; letter-spacing: -3px; }
+  .price-block .label { font-size: 17px; color: #666; display: block; margin-top: 6px; }
 
-  .btn { display: inline-block; padding: 16px 40px; border-radius: 8px; font-weight: 600; font-size: 16px; text-decoration: none; transition: all 0.2s; cursor: pointer; border: none; }
+  .btn { display: inline-block; padding: 18px 44px; border-radius: 10px; font-weight: 600; font-size: 18px; text-decoration: none; transition: all 0.2s; cursor: pointer; border: none; }
   .btn-primary { background: #33ccff; color: #0a0a0a; }
-  .btn-primary:hover { background: #5dd8ff; transform: translateY(-1px); box-shadow: 0 8px 28px rgba(51,204,255,0.25); }
-  .btn-outline { border: 1px solid #333; color: #ccc; background: transparent; margin-left: 12px; }
+  .btn-primary:hover { background: #5dd8ff; transform: translateY(-2px); box-shadow: 0 10px 32px rgba(51,204,255,0.28); }
+  .btn-outline { border: 1px solid #333; color: #ccc; background: transparent; margin-left: 14px; }
   .btn-outline:hover { border-color: #666; color: #fff; }
 
   /* Divider */
   .divider { border: none; border-top: 1px solid #1a1a1a; }
 
   /* Story */
-  .story { padding: 60px 0; max-width: 640px; margin: 0 auto; }
-  .story h2 { font-size: 26px; font-weight: 700; margin-bottom: 20px; letter-spacing: -0.5px; }
-  .story p { color: #999; font-size: 15px; margin-bottom: 14px; }
+  .story { padding: 70px 0; max-width: 700px; margin: 0 auto; }
+  .story h2 { font-size: 30px; font-weight: 700; margin-bottom: 24px; letter-spacing: -0.5px; }
+  .story p { color: #aaa; font-size: 17px; margin-bottom: 18px; line-height: 1.7; }
 
   /* What you get */
-  .what { padding: 60px 0; }
-  .what h2 { font-size: 26px; font-weight: 700; margin-bottom: 12px; text-align: center; letter-spacing: -0.5px; }
-  .what .subtitle { color: #666; font-size: 15px; margin-bottom: 40px; text-align: center; }
-  .what-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; max-width: 680px; margin: 0 auto; }
-  .what-card { background: #111; border: 1px solid #1a1a1a; border-radius: 10px; padding: 28px; }
-  .what-card .icon { font-size: 22px; margin-bottom: 12px; }
-  .what-card h3 { font-size: 17px; font-weight: 600; margin-bottom: 8px; }
-  .what-card p { color: #888; font-size: 14px; line-height: 1.5; }
+  .what { padding: 70px 0; }
+  .what h2 { font-size: 30px; font-weight: 700; margin-bottom: 14px; text-align: center; letter-spacing: -0.5px; }
+  .what .subtitle { color: #777; font-size: 17px; margin-bottom: 44px; text-align: center; }
+  .what-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; max-width: 720px; margin: 0 auto; }
+  .what-card { background: #111; border: 1px solid #1a1a1a; border-radius: 12px; padding: 32px; }
+  .what-card .icon { font-size: 26px; margin-bottom: 14px; }
+  .what-card h3 { font-size: 19px; font-weight: 600; margin-bottom: 10px; }
+  .what-card p { color: #999; font-size: 16px; line-height: 1.6; }
 
-  /* Quote */
-  .quote { padding: 60px 0; max-width: 620px; margin: 0 auto; }
-  .quote blockquote { font-size: 20px; font-weight: 500; color: #ccc; font-style: italic; line-height: 1.5; margin-bottom: 12px; }
-  .quote blockquote::before { content: '"'; color: #33ccff; }
-  .quote .attrib { color: #555; font-size: 14px; }
+  /* Benefits */
+  .benefits { padding: 70px 0; max-width: 700px; margin: 0 auto; }
+  .benefits h2 { font-size: 28px; font-weight: 700; margin-bottom: 32px; text-align: center; letter-spacing: -0.5px; }
+  .benefits-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+  .benefit-item { padding: 16px 20px; background: #0d0d0d; border: 1px solid #1a1a1a; border-radius: 8px; font-size: 16px; color: #bbb; }
+  .benefit-item span { color: #33ccff; margin-right: 8px; font-weight: 700; }
 
-  /* Timeline */
-  .timeline { padding: 60px 0; max-width: 600px; margin: 0 auto; }
-  .timeline h2 { font-size: 26px; font-weight: 700; margin-bottom: 32px; text-align: center; letter-spacing: -0.5px; }
-  .timeline-item { display: flex; gap: 18px; margin-bottom: 28px; }
-  .timeline-item .num { width: 42px; height: 42px; min-width: 42px; border-radius: 50%; background: #111; border: 1px solid #1a1a1a; color: #33ccff; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 16px; }
-  .timeline-item h4 { font-size: 15px; font-weight: 600; margin-bottom: 4px; }
-  .timeline-item p { color: #888; font-size: 14px; }
+  /* Use case */
+  .usecase { padding: 70px 0; max-width: 700px; margin: 0 auto; }
+  .usecase h2 { font-size: 28px; font-weight: 700; margin-bottom: 32px; text-align: center; letter-spacing: -0.5px; }
+  .usecase-grid { display: flex; flex-direction: column; gap: 18px; }
+  .usecase-card { background: #111; border: 1px solid #1a1a1a; border-radius: 12px; padding: 28px 30px; }
+  .usecase-card .before { color: #e05555; font-size: 16px; font-weight: 600; margin-bottom: 6px; }
+  .usecase-card .after { color: #4fc97a; font-size: 16px; font-weight: 600; }
+  .usecase-card p { color: #999; font-size: 16px; margin-top: 6px; }
+
+  /* How it works */
+  .timeline { padding: 70px 0; max-width: 680px; margin: 0 auto; }
+  .timeline h2 { font-size: 28px; font-weight: 700; margin-bottom: 36px; text-align: center; letter-spacing: -0.5px; }
+  .timeline-item { display: flex; gap: 22px; margin-bottom: 32px; }
+  .timeline-item .num { width: 50px; height: 50px; min-width: 50px; border-radius: 50%; background: #111; border: 1px solid #1a1a1a; color: #33ccff; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 20px; }
+  .timeline-item h4 { font-size: 18px; font-weight: 600; margin-bottom: 6px; }
+  .timeline-item p { color: #999; font-size: 16px; line-height: 1.5; }
 
   /* FAQ */
-  .faq { padding: 60px 0; max-width: 600px; margin: 0 auto; }
-  .faq h2 { font-size: 26px; font-weight: 700; margin-bottom: 32px; text-align: center; letter-spacing: -0.5px; }
-  .faq-item { margin-bottom: 24px; }
-  .faq-item h4 { font-size: 15px; font-weight: 600; margin-bottom: 6px; }
-  .faq-item p { color: #888; font-size: 14px; line-height: 1.5; }
+  .faq { padding: 70px 0; max-width: 680px; margin: 0 auto; }
+  .faq h2 { font-size: 28px; font-weight: 700; margin-bottom: 36px; text-align: center; letter-spacing: -0.5px; }
+  .faq-item { margin-bottom: 28px; }
+  .faq-item h4 { font-size: 18px; font-weight: 600; margin-bottom: 8px; }
+  .faq-item p { color: #999; font-size: 16px; line-height: 1.6; }
 
   /* CTA */
-  .cta { padding: 80px 0 60px; text-align: center; }
-  .cta h2 { font-size: 30px; font-weight: 800; margin-bottom: 14px; letter-spacing: -0.5px; }
-  .cta p { color: #888; font-size: 16px; margin-bottom: 32px; max-width: 460px; margin-left: auto; margin-right: auto; }
-  .cta .guarantee { margin-top: 20px; font-size: 13px; color: #555; }
+  .cta { padding: 90px 0 70px; text-align: center; }
+  .cta h2 { font-size: 36px; font-weight: 800; margin-bottom: 16px; letter-spacing: -0.5px; }
+  .cta p { color: #999; font-size: 19px; margin-bottom: 36px; max-width: 500px; margin-left: auto; margin-right: auto; }
+  .cta .guarantee { margin-top: 24px; font-size: 15px; color: #666; }
 
-  footer { padding: 40px 0; text-align: center; color: #444; font-size: 13px; }
-  footer a { color: #555; text-decoration: none; }
+  footer { padding: 44px 0; text-align: center; color: #555; font-size: 15px; }
+  footer a { color: #666; text-decoration: none; }
 
-  @media (max-width: 600px) {
-    .hero h1 { font-size: 30px; }
-    .what-grid { grid-template-columns: 1fr; }
-    .hero { padding: 60px 0 40px; }
+  @media (max-width: 650px) {
+    .hero h1 { font-size: 34px; }
+    .hero p { font-size: 17px; }
+    .price-block .dollar { font-size: 48px; }
+    .what-grid, .benefits-grid { grid-template-columns: 1fr; }
+    .hero { padding: 70px 0 50px; }
   }
 </style>
 </head>
@@ -91,10 +103,10 @@
   <section class="hero">
     <div class="hero-badge">Done For You — One Offer</div>
     <h1>I'll build your<br><span class="highlight">AI operations</span></h1>
-    <p>One main agent. One custom agent. Deployed on your server. You own everything. No monthly fee from me.</p>
+    <p>One main agent. One custom agent. Deployed on your server. Controlled through Telegram. You own everything. No monthly fee from me.</p>
 
     <div class="price-block">
-      <span class="dollar">$5,000</span>
+      <span class="dollar">$4,997</span>
       <span class="label">One-time. Done.</span>
     </div>
 
@@ -106,10 +118,10 @@
 
   <!-- Story -->
   <section class="story" id="story">
-    <h2>I run a fashion brand with zero staff.</h2>
-    <p>I'm Zack. I built Hipland from my mum's back room to $2.5M in lifetime revenue. Then a cyclone hit. Then an eviction. Then a lawsuit. Then cancer.</p>
-    <p>I rebuilt from a hospital bed with nothing but a laptop and a conviction: AI could run a lean business better and cheaper than any traditional team.</p>
-    <p>Today my entire operation runs on autonomous AI agents. Customer service, finance, product management, creative — all handled. I built it myself using open-source tools. No SaaS. No subscriptions. Just agents that work.</p>
+    <h2>Hey, I'm Zack.</h2>
+    <p>I'm the founder and operator of Hipland, an e-commerce fashion brand. Over the last few years, my business has generated over $2.5 million. I started it from the back room of my mum's house during COVID and scaled it from a little website to a pop-up retail location, to a permanent retail store on one of Australia's most prominent fashion high streets — and then to a fully AI-automated e-commerce business.</p>
+    <p>Nothing in life goes perfectly, and I faced a series of gut punches that nobody should have to endure. After my recovery from stomach cancer, I decided I wanted to keep running my business — but free from the shackles of employees and all the compliance and tax obligations that go with them. I wanted to keep more of my precious revenue for my own profit rather than paying for subscriptions like Claude and ChatGPT, and for overseas VAs that I knew I could build my own version of.</p>
+    <p>With that conviction, I rebuilt my company from the ground up around one idea: that AI could run this business better than I could. Since then, I've built an entire AI operating system. Customer service, Shopify product builds, the best AI image generation pipeline I've seen across any brand on the internet, a video generating pipeline, market research and trend analysis, Meta ads management, web banners from templates, Klaviyo campaign management, social media posting — any task a human can do within an e-commerce business, my AI can do.</p>
     <p><strong>Now I'll build it for you.</strong></p>
   </section>
 
@@ -124,12 +136,12 @@
       <div class="what-card">
         <div class="icon">🧠</div>
         <h3>Your Main Agent</h3>
-        <p>Like having a COO in your pocket. It knows your business, manages your other agents, handles your morning reports, and keeps everything running. Custom-built for how you work.</p>
+        <p>Like having a COO in your pocket. It knows your business, manages your other agents, handles your morning reports, and keeps everything running. Controlled through Telegram — message it like you'd message a team member.</p>
       </div>
       <div class="what-card">
-        <div class="icon">📬</div>
+        <div class="icon">⚡</div>
         <h3>One Custom Agent</h3>
-        <p>Whatever's eating your time. Customer service. Order processing. Inventory. Creative briefs. Pick the task you hate most — I'll build an agent that owns it.</p>
+        <p>Whatever's eating your time. Customer service. Order management. Creative briefs. Inventory tracking. Pick the task you hate most — I'll build an agent that owns it. Need more agents later? Additional agents at additional cost.</p>
       </div>
       <div class="what-card">
         <div class="icon">🖥️</div>
@@ -139,52 +151,83 @@
       <div class="what-card">
         <div class="icon">📖</div>
         <h3>Handover & Docs</h3>
-        <p>One-hour video walkthrough showing you exactly how it works. Written documentation. You'll know how to restart it, check logs, and update prompts. You run it. I'm not a dependency.</p>
+        <p>One-hour video walkthrough showing you exactly how it works. Written documentation. You'll know how to use it, restart it, and update prompts. You run it. I'm not a dependency.</p>
       </div>
     </div>
   </section>
 
   <hr class="divider">
 
-  <!-- Quote -->
-  <section class="quote">
-    <blockquote>
-      I was replying to 40 customer emails a day and paying for a Claude subscription I barely used. Now my AI handles both. I check in once a day for 5 minutes.
-    </blockquote>
-    <p class="attrib">What your first client will say. Mine already can.</p>
+  <!-- Use Cases -->
+  <section class="usecase">
+    <h2>What this actually replaces</h2>
+    <div class="usecase-grid">
+      <div class="usecase-card">
+        <div class="before">Before: $150/month Claude Max + $500/week VA</div>
+        <div class="after">After: ~$45/month total. No rate limits. No session caps. 24/7.</div>
+        <p>Your main agent handles everything you currently use Claude for — plus it runs autonomously while you sleep. Your custom agent replaces the overseas VA who handles your customer emails, but faster and with zero mistakes.</p>
+      </div>
+      <div class="usecase-card">
+        <div class="before">Before: 40 customer emails a day, every day</div>
+        <div class="after">After: 5 minutes a day checking in. Escalations only.</div>
+        <p>The CS bot triages your inbox, handles returns, answers product questions, and flags anomalies. You only step in when something actually needs you — which isn't often.</p>
+      </div>
+      <div class="usecase-card">
+        <div class="before">Before: $2,500/month in subscriptions and headcount</div>
+        <div class="after">After: ~$45/month. Everything else is profit.</div>
+        <p>No Claude subscription. No ChatGPT. No VA salary. No compliance. No super. No tax obligations. Just an AI system that works harder than any team you've ever hired.</p>
+      </div>
+    </div>
   </section>
 
   <hr class="divider">
 
-  <!-- Timeline -->
+  <!-- Benefits -->
+  <section class="benefits">
+    <h2>Bottom line</h2>
+    <div class="benefits-grid">
+      <div class="benefit-item"><span>⏱</span> Buy back your time</div>
+      <div class="benefit-item"><span>💰</span> Keep more of your revenue for profit</div>
+      <div class="benefit-item"><span>🔄</span> Infinitely scalable — runs 24 hours a day</div>
+      <div class="benefit-item"><span>📉</span> Stop paying for subscriptions you don't need</div>
+      <div class="benefit-item"><span>📈</span> Sell more products, keep customers happier</div>
+      <div class="benefit-item"><span>🧘</span> Lower your stress, improve your life</div>
+      <div class="benefit-item"><span>⚡</span> Efficiency that no human team can match</div>
+      <div class="benefit-item"><span>🏗</span> Build a bot for any task in your business</div>
+    </div>
+  </section>
+
+  <hr class="divider">
+
+  <!-- How it Works -->
   <section class="timeline">
     <h2>How it works</h2>
     <div class="timeline-item">
       <div class="num">1</div>
       <div>
-        <h4>You tell me what you need</h4>
-        <p>One call. 30 minutes. I learn your business, your pain points, and what your custom agent should own.</p>
+        <h4>Discovery call (30 minutes)</h4>
+        <p>We talk about your business, your pain points, and what you want your custom agent to handle. I learn how you work and what matters most.</p>
       </div>
     </div>
     <div class="timeline-item">
       <div class="num">2</div>
       <div>
-        <h4>You set up a server</h4>
-        <p>$20-30/month DigitalOcean droplet. I'll send you the exact link. Takes 5 minutes. Or I do it — your choice.</p>
+        <h4>Server setup (on the call, or right after)</h4>
+        <p>I send you a DigitalOcean referral link. You set up your $20-30/month droplet in 5 minutes — your card, your name. No sharing credentials. Done.</p>
       </div>
     </div>
     <div class="timeline-item">
       <div class="num">3</div>
       <div>
-        <h4>I build your system</h4>
-        <p>One weekend. Main agent configured. Custom agent built. APIs connected. Tested against your real data.</p>
+        <h4>I build and test your system</h4>
+        <p>One week. Main agent configured to your business. Custom agent built for your specific task. All APIs connected and tested against your real data.</p>
       </div>
     </div>
     <div class="timeline-item">
       <div class="num">4</div>
       <div>
-        <h4>Handover</h4>
-        <p>One-hour video call. I walk you through everything. You get written docs. You walk away with a running system you own.</p>
+        <h4>Handover call + docs</h4>
+        <p>One-hour video walkthrough. Written documentation covering everything. You walk away with a running system you fully own.</p>
       </div>
     </div>
   </section>
@@ -197,23 +240,23 @@
 
     <div class="faq-item">
       <h4>What does it actually cost to run?</h4>
-      <p>~$25/month for the server (DigitalOcean). ~$15-30/month for AI API access (DeepSeek or similar). That's it. You pay those providers directly, not me. Total ongoing: roughly $40-55/month.</p>
-    </div>
-    <div class="faq-item">
-      <h4>What if it breaks?</h4>
-      <p>You'll know how to restart it from the handover call. If something's beyond that, you can hire me for support at my hourly rate. But honestly — it's stable. Mine's been running for months.</p>
-    </div>
-    <div class="faq-item">
-      <h4>Do I need to know how to code?</h4>
-      <p>No. I build it. I hand it to you. I show you how to use it. You don't touch code. You just talk to your agents the same way you'd talk to a team member.</p>
-    </div>
-    <div class="faq-item">
-      <h4>What platforms does this work with?</h4>
-      <p>Shopify, Gmail, Meta Ads, Google Drive, Xero, Klaviyo, GA4 — basically anything with an API. If your stack is standard ecom, I can connect it.</p>
+      <p>~$25/month for the server (DigitalOcean droplet). ~$15-30/month for AI API access (DeepSeek or similar). You pay those providers directly, not me. Total ongoing: roughly $40-55/month. Compare that to a $150/month Claude Max subscription that rate-limits you — and this runs 24/7.</p>
     </div>
     <div class="faq-item">
       <h4>What if I want more agents later?</h4>
-      <p>You add them. Or you hire me again. The system is built to scale — your main agent can manage additional agents as your business grows.</p>
+      <p>You can add them yourself once you understand the system — or hire me to build additional agents at an additional cost. The infrastructure scales. Your main agent can coordinate a full team.</p>
+    </div>
+    <div class="faq-item">
+      <h4>Do I need to know how to code?</h4>
+      <p>No. I build it. I hand it to you. I show you how to use it via Telegram. You talk to your agents like you'd talk to a team member.</p>
+    </div>
+    <div class="faq-item">
+      <h4>What platforms does this work with?</h4>
+      <p>Shopify, Gmail, Meta Ads, Google Drive, Xero, Klaviyo, GA4 — basically anything with an API. If your stack is standard e-commerce, I can connect it.</p>
+    </div>
+    <div class="faq-item">
+      <h4>What if it breaks?</h4>
+      <p>You'll know how to restart it from the handover call. If something's beyond that, you can hire me for support at my hourly rate. It's stable — mine's been running for months.</p>
     </div>
   </section>
 
@@ -222,13 +265,13 @@
   <!-- CTA -->
   <section class="cta">
     <h2>Stop doing the work a machine should do.</h2>
-    <p>One weekend. Two agents. Your server. Your keys. Your time back.</p>
-    <a href="https://buy.stripe.com/PLACEHOLDER" class="btn btn-primary">Get Started — $5,000</a>
+    <p>One week. Two agents. Your server. Your keys. Your time back.</p>
+    <a href="https://buy.stripe.com/PLACEHOLDER" class="btn btn-primary">Get Started — $4,997</a>
     <p class="guarantee">Not happy with what I build? Full refund. I keep nothing.</p>
   </section>
 
   <footer>
-    <p>Zack Curran · Sunshine Coast, Australia · <a href="mailto:hello@hipland.co">hello@hipland.co</a></p>
+    <p>Zack Curran · Sunshine Coast, Australia · <a href="mailto:zack@hipland.co">zack@hipland.co</a></p>
   </footer>
 
 </div>
