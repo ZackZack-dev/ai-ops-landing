@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Full Fashion AI Stack — $25,000</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: 'Inter', -apple-system, sans-serif; background: #0a0a0a; color: #e0e0e0; line-height: 1.65; }
+
+  .container { max-width: 900px; margin: 0 auto; padding: 0 28px; }
+
+  /* Hero */
+  .hero { padding: 120px 0 70px; text-align: center; }
+  .hero-badge { display: inline-block; background: rgba(123,97,255,0.08); color: #9b8bff; border: 1px solid rgba(123,97,255,0.2); padding: 8px 22px; border-radius: 22px; font-size: 14px; font-weight: 600; margin-bottom: 32px; letter-spacing: 1.5px; text-transform: uppercase; }
+  .hero h1 { font-size: 54px; font-weight: 900; line-height: 1.08; margin-bottom: 24px; letter-spacing: -2px; }
+  .hero h1 .highlight { background: linear-gradient(135deg, #7b61ff, #ff61a6); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+  .hero p { font-size: 21px; color: #999; max-width: 620px; margin: 0 auto 48px; }
+
+  .price-block { margin-bottom: 44px; }
+  .price-block .dollar { font-size: 64px; font-weight: 900; color: #fff; letter-spacing: -3px; }
+  .price-block .label { font-size: 17px; color: #666; display: block; margin-top: 6px; }
+
+  .btn { display: inline-block; padding: 18px 44px; border-radius: 10px; font-weight: 600; font-size: 18px; text-decoration: none; transition: all 0.2s; cursor: pointer; border: none; }
+  .btn-primary { background: #7b61ff; color: #fff; }
+  .btn-primary:hover { background: #9b85ff; transform: translateY(-2px); box-shadow: 0 10px 32px rgba(123,97,255,0.3); }
+  .btn-outline { border: 1px solid #333; color: #ccc; background: transparent; margin-left: 14px; }
+  .btn-outline:hover { border-color: #666; color: #fff; }
+
+  .divider { border: none; border-top: 1px solid #1a1a1a; }
+
+  /* ROI Banner */
+  .roi { padding: 50px 0; max-width: 750px; margin: 0 auto; text-align: center; }
+  .roi .big-num { font-size: 48px; font-weight: 900; color: #7b61ff; letter-spacing: -1px; }
+  .roi p { color: #999; font-size: 18px; margin-top: 12px; max-width: 600px; margin-left: auto; margin-right: auto; }
+
+  /* Story */
+  .story { padding: 70px 0; max-width: 700px; margin: 0 auto; }
+  .story h2 { font-size: 30px; font-weight: 700; margin-bottom: 24px; letter-spacing: -0.5px; }
+  .story p { color: #aaa; font-size: 17px; margin-bottom: 18px; line-height: 1.7; }
+
+  /* Pipeline highlight */
+  .pipeline { padding: 70px 0; }
+  .pipeline h2 { font-size: 28px; font-weight: 700; margin-bottom: 14px; text-align: center; letter-spacing: -0.5px; }
+  .pipeline .subtitle { color: #777; font-size: 17px; margin-bottom: 44px; text-align: center; }
+  .pipe-steps { max-width: 720px; margin: 0 auto; display: flex; flex-direction: column; gap: 16px; }
+  .pipe-step { display: flex; align-items: center; gap: 20px; padding: 22px 28px; background: #111; border: 1px solid #1a1a1a; border-radius: 12px; }
+  .pipe-step .step-icon { font-size: 28px; min-width: 40px; text-align: center; }
+  .pipe-step .step-num { color: #7b61ff; font-size: 13px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; min-width: 50px; }
+  .pipe-step .step-text { color: #bbb; font-size: 16px; }
+  .pipe-step .arrow { color: #444; font-size: 20px; }
+
+  /* What you get */
+  .what { padding: 70px 0; }
+  .what h2 { font-size: 30px; font-weight: 700; margin-bottom: 14px; text-align: center; letter-spacing: -0.5px; }
+  .what .subtitle { color: #777; font-size: 17px; margin-bottom: 44px; text-align: center; }
+  .what-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; max-width: 760px; margin: 0 auto; }
+  .what-card { background: #111; border: 1px solid #1a1a1a; border-radius: 12px; padding: 32px; }
+  .what-card .icon { font-size: 26px; margin-bottom: 14px; }
+  .what-card h3 { font-size: 19px; font-weight: 600; margin-bottom: 10px; }
+  .what-card p { color: #999; font-size: 16px; line-height: 1.6; }
+
+  /* Comparison */
+  .comparison { padding: 70px 0; max-width: 750px; margin: 0 auto; }
+  .comparison h2 { font-size: 28px; font-weight: 700; margin-bottom: 36px; text-align: center; letter-spacing: -0.5px; }
+  .comp-table { width: 100%; border-collapse: collapse; }
+  .comp-table th { color: #666; font-size: 14px; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; padding: 14px 20px; text-align: left; border-bottom: 1px solid #1a1a1a; }
+  .comp-table td { padding: 16px 20px; border-bottom: 1px solid #111; font-size: 16px; }
+  .comp-table tr td:first-child { color: #aaa; }
+  .comp-table tr td:nth-child(2) { color: #e05555; }
+  .comp-table tr td:nth-child(3) { color: #4fc97a; font-weight: 600; }
+
+  /* Benefits */
+  .benefits { padding: 70px 0; max-width: 750px; margin: 0 auto; }
+  .benefits h2 { font-size: 28px; font-weight: 700; margin-bottom: 36px; text-align: center; letter-spacing: -0.5px; }
+  .benefits-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+  .benefit-item { padding: 16px 20px; background: #0d0d0d; border: 1px solid #1a1a1a; border-radius: 8px; font-size: 16px; color: #bbb; }
+  .benefit-item span { color: #7b61ff; margin-right: 8px; font-weight: 700; }
+
+  /* Process */
+  .process { padding: 70px 0; max-width: 720px; margin: 0 auto; }
+  .process h2 { font-size: 28px; font-weight: 700; margin-bottom: 36px; text-align: center; letter-spacing: -0.5px; }
+  .process-item { display: flex; gap: 22px; margin-bottom: 32px; }
+  .process-item .num { width: 50px; height: 50px; min-width: 50px; border-radius: 50%; background: #111; border: 1px solid #1a1a1a; color: #7b61ff; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 20px; }
+  .process-item h4 { font-size: 18px; font-weight: 600; margin-bottom: 6px; }
+  .process-item p { color: #999; font-size: 16px; line-height: 1.5; }
+
+  /* FAQ */
+  .faq { padding: 70px 0; max-width: 720px; margin: 0 auto; }
+  .faq h2 { font-size: 28px; font-weight: 700; margin-bottom: 36px; text-align: center; letter-spacing: -0.5px; }
+  .faq-item { margin-bottom: 28px; }
+  .faq-item h4 { font-size: 18px; font-weight: 600; margin-bottom: 8px; }
+  .faq-item p { color: #999; font-size: 16px; line-height: 1.6; }
+
+  /* CTA */
+  .cta { padding: 90px 0 70px; text-align: center; }
+  .cta h2 { font-size: 36px; font-weight: 800; margin-bottom: 16px; letter-spacing: -0.5px; }
+  .cta p { color: #999; font-size: 19px; margin-bottom: 36px; max-width: 540px; margin-left: auto; margin-right: auto; }
+  .cta .guarantee { margin-top: 24px; font-size: 15px; color: #666; }
+
+  footer { padding: 44px 0; text-align: center; color: #555; font-size: 15px; }
+  footer a { color: #666; text-decoration: none; }
+
+  @media (max-width: 650px) {
+    .hero h1 { font-size: 32px; }
+    .hero p { font-size: 17px; }
+    .price-block .dollar { font-size: 48px; }
+    .what-grid, .benefits-grid { grid-template-columns: 1fr; }
+    .hero { padding: 70px 0 50px; }
+    .comp-table { font-size: 14px; }
+  }
+</style>
+</head>
+<body>
+
+<div class="container">
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="hero-badge">For Fashion Brands — One Offer</div>
+    <h1>Your entire brand<br><span class="highlight">run by AI</span></h1>
+    <p>Customer service. Product builds. Trend research. And the most valuable piece: an image generation pipeline that turns flat lays into world-class model photography. No photoshoot. No studio. No waiting.</p>
+
+    <div class="price-block">
+      <span class="dollar">$25,000</span>
+      <span class="label">One-time. Your photography costs, eliminated.</span>
+    </div>
+
+    <a href="https://buy.stripe.com/PLACEHOLDER" class="btn btn-primary">Apply Now</a>
+    <a href="#pipeline" class="btn btn-outline">See the pipeline →</a>
+  </section>
+
+  <hr class="divider">
+
+  <!-- ROI -->
+  <section class="roi">
+    <div class="big-num">One photoshoot costs $2,000.</div>
+    <p>If you shoot a new collection every month, that's $24,000 a year. This system replaces every single one — forever. And your images are better, faster, and infinitely repeatable. The pipeline pays for itself before your next collection drops.</p>
+  </section>
+
+  <hr class="divider">
+
+  <!-- Story -->
+  <section class="story">
+    <h2>Hey, I'm Zack.</h2>
+    <p>I'm the founder of Hipland, a fashion brand that's generated over $2.5 million. I started it from the back room of my mum's house and scaled it to a retail store on Australia's most prominent fashion strip — and then rebuilt the entire thing to run on AI.</p>
+    <p>After recovering from cancer, I decided I was done with photoshoots that cost thousands, employees with tax obligations and compliance headaches, and subscriptions bleeding my margins. I built an AI operating system that handles everything: the most advanced image generation pipeline I've seen on any brand, customer service, Shopify product builds, trend research, Meta ads management, Klaviyo — every task a fashion brand needs.</p>
+    <p><strong>I'm only taking on a handful of brands. This is the exact system that runs mine.</strong></p>
+  </section>
+
+  <hr class="divider">
+
+  <!-- Pipeline -->
+  <section class="pipeline" id="pipeline">
+    <h2>The image generation pipeline</h2>
+    <p class="subtitle">This is what makes the $25K offer worth it. Nothing else like it exists.</p>
+
+    <div class="pipe-steps">
+      <div class="pipe-step">
+        <span class="step-num">Step 1</span>
+        <span class="step-icon">📸</span>
+        <span class="step-text"><strong>Drop in your flat lays.</strong> Supplier photos, phone shots, anything. The AI reads the garment directly from the image — no manual descriptions needed.</span>
+      </div>
+      <div class="pipe-step">
+        <span class="step-num">Step 2</span>
+        <span class="step-icon">🧠</span>
+        <span class="step-text"><strong>The AI analyzes the garment.</strong> Fabric weight, drape, collar construction, hem length, colour accuracy. It builds the prompt from what it sees.</span>
+      </div>
+      <div class="pipe-step">
+        <span class="step-num">Step 3</span>
+        <span class="step-icon">✨</span>
+        <span class="step-text"><strong>World-class model imagery is generated.</strong> Hero shots, detail shots, lifestyle scenes. Consistent lighting. Consistent models. On-brand every time.</span>
+      </div>
+      <div class="pipe-step">
+        <span class="step-num">Step 4</span>
+        <span class="step-icon">⚡</span>
+        <span class="step-text"><strong>Upload directly to Shopify.</strong> Products go from flat lay to fully imaged in hours, not weeks. New collection? Done before your competitors finish their shot list.</span>
+      </div>
+    </div>
+  </section>
+
+  <hr class="divider">
+
+  <!-- What you get -->
+  <section class="what">
+    <h2>Everything you get</h2>
+    <p class="subtitle">Your entire fashion brand operations stack. Built by me. Owned by you. One price.</p>
+
+    <div class="what-grid">
+      <div class="what-card">
+        <div class="icon">🧠</div>
+        <h3>Your Main Agent</h3>
+        <p>Your AI COO. Manages your entire system, handles morning reports, delegates tasks, and keeps everything running. Controlled through Telegram — message it like a team member.</p>
+      </div>
+      <div class="what-card">
+        <div class="icon">🖼️</div>
+        <h3>Image Generation Pipeline</h3>
+        <p>Flat lay in → model imagery out. Hero shots, detail crops, lifestyle scenes. Consistent, on-brand, photorealistic. No studio. No models. No waiting. This alone replaces every photoshoot.</p>
+      </div>
+      <div class="what-card">
+        <div class="icon">📬</div>
+        <h3>Customer Service Bot</h3>
+        <p>Triages your inbox, handles returns, answers product questions, flags anomalies. You only step in when something actually needs you. 24/7. Zero delay.</p>
+      </div>
+      <div class="what-card">
+        <div class="icon">🛒</div>
+        <h3>Shopify Product Builder</h3>
+        <p>Creates products from your master sheet. Variants, pricing, collections, SEO — all automated. New drop? Products are live before you finish your coffee.</p>
+      </div>
+      <div class="what-card">
+        <div class="icon">🔍</div>
+        <h3>Research & Trends Agent</h3>
+        <p>Weekly competitor scanning. Supplier product pipelines. Trend analysis. Market intelligence delivered to you — your research department, automated.</p>
+      </div>
+      <div class="what-card">
+        <div class="icon">📊</div>
+        <h3>Finance & Reporting</h3>
+        <p>Daily sales reports. Meta spend tracking. Profit analysis. MER monitoring. Everything you need to run the numbers, delivered to your Telegram every morning.</p>
+      </div>
+    </div>
+  </section>
+
+  <hr class="divider">
+
+  <!-- Comparison -->
+  <section class="comparison">
+    <h2>The numbers don't lie</h2>
+    <table class="comp-table">
+      <tr><th></th><th>Without this</th><th>With this</th></tr>
+      <tr><td>Product photography</td><td>$24,000/yr (12 shoots)</td><td>$0/yr</td></tr>
+      <tr><td>Customer service</td><td>$25,000-40,000/yr (VA or hire)</td><td>$0/yr</td></tr>
+      <tr><td>AI subscriptions</td><td>$150-500/month (Claude, ChatGPT, etc)</td><td>~$45/month</td></tr>
+      <tr><td>Product builds</td><td>Hours of manual Shopify work</td><td>Automated</td></tr>
+      <tr><td>Speed to market</td><td>Weeks from flat lay to live</td><td>Same day</td></tr>
+      <tr><td><strong>Annual cost</strong></td><td><strong>$50,000-70,000+</strong></td><td><strong>~$540/yr + $25K once</strong></td></tr>
+    </table>
+  </section>
+
+  <hr class="divider">
+
+  <!-- Benefits -->
+  <section class="benefits">
+    <h2>What actually changes</h2>
+    <div class="benefits-grid">
+      <div class="benefit-item"><span>📸</span> No more photoshoots. Ever.</div>
+      <div class="benefit-item"><span>⚡</span> New collections live in hours, not weeks</div>
+      <div class="benefit-item"><span>💰</span> Save $50-70K per year on ops</div>
+      <div class="benefit-item"><span>🎯</span> Consistent, on-brand imagery every time</div>
+      <div class="benefit-item"><span>🔄</span> Infinitely scalable — unlimited products</div>
+      <div class="benefit-item"><span>😌</span> No employees. No compliance. No stress.</div>
+      <div class="benefit-item"><span>📈</span> Launch faster than your competitors</div>
+      <div class="benefit-item"><span>🏠</span> Run your brand from anywhere</div>
+    </div>
+  </section>
+
+  <hr class="divider">
+
+  <!-- Process -->
+  <section class="process">
+    <h2>How it works</h2>
+    <div class="process-item">
+      <div class="num">1</div>
+      <div>
+        <h4>Discovery call (1 hour)</h4>
+        <p>Deep dive into your brand. Your aesthetic, your collections, your pain points. We map out exactly what your AI system needs to do and what your image pipeline should produce.</p>
+      </div>
+    </div>
+    <div class="process-item">
+      <div class="num">2</div>
+      <div>
+        <h4>Server setup</h4>
+        <p>I send you a DigitalOcean referral link. You set up your droplet in 5 minutes — your card, your name. No sharing credentials. Done.</p>
+      </div>
+    </div>
+    <div class="process-item">
+      <div class="num">3</div>
+      <div>
+        <h4>System build (3-4 weeks)</h4>
+        <p>Full AI operations stack configured. Image pipeline trained on your brand aesthetic. All agents built, tested, and connected to your APIs. You get progress updates throughout.</p>
+      </div>
+    </div>
+    <div class="process-item">
+      <div class="num">4</div>
+      <div>
+        <h4>Handover + training</h4>
+        <p>Comprehensive video walkthrough. Written documentation. I train you on every part of the system. You walk away with a fashion brand AI operations stack you fully own.</p>
+      </div>
+    </div>
+  </section>
+
+  <hr class="divider">
+
+  <!-- FAQ -->
+  <section class="faq">
+    <h2>Questions people ask</h2>
+
+    <div class="faq-item">
+      <h4>Who is this actually for?</h4>
+      <p>Fashion and apparel brands doing $500K+ in annual revenue who are sick of photoshoot costs, operational overhead, and being chained to their inbox. If you're spending more than $2,000/month on photography, this pays for itself in year one.</p>
+    </div>
+    <div class="faq-item">
+      <h4>How good are the images, really?</h4>
+      <p>I've built what I genuinely believe is the best AI image generation pipeline for fashion on the market. The system reads your flat lay directly — the AI sees the garment, not a text description. Results are photorealistic, brand-consistent, and indistinguishable from studio photography. Better, in many cases, because there are no lighting inconsistencies, no model availability issues, and no reshoot costs.</p>
+    </div>
+    <div class="faq-item">
+      <h4>What's the ongoing cost?</h4>
+      <p>~$25/month for the server. ~$15-30/month for AI API access. That's it. About $45/month total to run your entire brand operations. Compare that to what you're paying now.</p>
+    </div>
+    <div class="faq-item">
+      <h4>Can I add more later?</h4>
+      <p>Yes. The system scales. More agents, more pipelines, more capabilities — all built on the same infrastructure. Additional custom work at additional cost.</p>
+    </div>
+    <div class="faq-item">
+      <h4>How many brands are you taking on?</h4>
+      <p>Very few. I'm one person and I build every system myself. This isn't an agency — it's me, my expertise, and the exact system that runs my own brand. If you're serious, apply.</p>
+    </div>
+  </section>
+
+  <hr class="divider">
+
+  <!-- CTA -->
+  <section class="cta">
+    <h2>The next fashion brand to launch without a photoshoot could be yours.</h2>
+    <p>3-4 weeks. Full AI stack. Image pipeline included. Your server. Your keys. Your brand, automated.</p>
+    <a href="https://buy.stripe.com/PLACEHOLDER" class="btn btn-primary">Apply — $25,000</a>
+    <p class="guarantee">Limited availability. Not every brand is a fit. Let's talk first.</p>
+  </section>
+
+  <footer>
+    <p>Zack Curran · Sunshine Coast, Australia · <a href="mailto:zack@hipland.co">zack@hipland.co</a></p>
+  </footer>
+
+</div>
+</body>
+</html>
