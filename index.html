@@ -10,7 +10,7 @@
   html { scroll-behavior: smooth; }
   body { font-family: 'Inter', -apple-system, sans-serif; background: #0a0a0a; color: #e0e0e0; line-height: 1.65; }
   .container { max-width: 960px; margin: 0 auto; padding: 0 28px; }
-  .divider { border: none; border-top: 1px solid #1a1a1a; }
+  .divider { border: none; border-top: 1px solid #2a2a2a; }
   .btn { display: inline-block; padding: 18px 44px; border-radius: 10px; font-weight: 600; font-size: 18px; text-decoration: none; transition: all 0.2s; border: none; cursor: pointer; text-align: center; }
 
   /* ===== HERO ===== */
@@ -21,9 +21,9 @@
   .hero > p { font-size: 21px; color: #999; max-width: 600px; margin: 0 auto 52px; }
 
   .offer-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; max-width: 780px; margin: 0 auto; }
-  .offer-card { background: #111; border: 1px solid #1a1a1a; border-radius: 14px; padding: 38px 30px; text-align: center; display: flex; flex-direction: column; }
-  .offer-card.starter { border-color: #1a2a33; }
-  .offer-card.full { border-color: #7b61ff; background: linear-gradient(180deg, #0d0a1a 0%, #111 100%); }
+  .offer-card { background: #141414; border: 1px solid #2a2a2a; box-shadow: 0 4px 20px rgba(0,0,0,0.3); border-radius: 14px; padding: 38px 30px; text-align: center; display: flex; flex-direction: column; }
+  .offer-card.starter { border-color: #2a3a44; }
+  .offer-card.full { border-color: #7b61ff; background: linear-gradient(180deg, #100c20 0%, #141414 100%); box-shadow: 0 4px 24px rgba(123,97,255,0.08); }
   .offer-card .tier-name { font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 10px; }
   .offer-card.starter .tier-name { color: #33ccff; }
   .offer-card.full .tier-name { color: #9b8bff; }
@@ -49,9 +49,9 @@
   .image-compare .subtitle { color: #777; font-size: 17px; margin-bottom: 40px; text-align: center; }
   .img-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; max-width: 800px; margin: 0 auto; }
   .img-card { border-radius: 12px; overflow: hidden; }
-  .img-card.bad { border: 2px solid #2a1a1a; }
-  .img-card.good { border: 2px solid #1a2a1a; }
-  .img-card img { width: 100%; height: auto; display: block; background: #111; }
+  .img-card.bad { border: 2px solid #3a2020; }
+  .img-card.good { border: 2px solid #203820; }
+  .img-card img { width: 100%; height: auto; display: block; background: #141414; }
   .img-card .img-label { padding: 14px 18px; font-size: 14px; font-weight: 600; }
   .img-card.bad .img-label { background: #1a0d0d; color: #e05555; }
   .img-card.good .img-label { background: #0d1a0d; color: #4fc97a; }
@@ -74,8 +74,8 @@
 
   /* What you get */
   .what-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; max-width: 720px; margin: 0 auto; }
-  .what-card { background: #111; border: 1px solid #1a1a1a; border-radius: 12px; padding: 32px; }
-  .what-card.starter-accent { border-color: #1a2a33; }
+  .what-card { background: #141414; border: 1px solid #2a2a2a; border-radius: 12px; padding: 32px; }
+  .what-card.starter-accent { border-color: #2a3a44; }
   .what-card .icon { font-size: 26px; margin-bottom: 14px; }
   .what-card h3 { font-size: 19px; font-weight: 600; margin-bottom: 10px; }
   .what-card p { color: #999; font-size: 16px; line-height: 1.6; }
@@ -83,7 +83,7 @@
   .usecase { max-width: 700px; margin: 60px auto; }
   .usecase h3 { font-size: 22px; font-weight: 700; margin-bottom: 24px; text-align: center; letter-spacing: -0.5px; }
   .usecase-grid { display: flex; flex-direction: column; gap: 14px; }
-  .usecase-card { background: #111; border: 1px solid #1a2a1a; border-radius: 12px; padding: 24px 28px; }
+  .usecase-card { background: #141414; border: 1px solid #23382a; border-radius: 12px; padding: 24px 28px; }
   .usecase-card .before { color: #e05555; font-size: 16px; font-weight: 600; margin-bottom: 6px; }
   .usecase-card .after { color: #4fc97a; font-size: 16px; font-weight: 600; }
   .usecase-card p { color: #999; font-size: 15px; margin-top: 6px; }
@@ -91,13 +91,13 @@
   .starter-benefits { max-width: 700px; margin: 60px auto; }
   .starter-benefits h3 { font-size: 22px; font-weight: 700; margin-bottom: 24px; text-align: center; letter-spacing: -0.5px; }
   .starter-benefits .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
-  .starter-benefits .item { padding: 16px 20px; background: #0d0d0d; border: 1px solid #1a1a1a; border-radius: 8px; font-size: 16px; color: #bbb; }
+  .starter-benefits .item { padding: 16px 20px; background: #141414; border: 1px solid #2a2a2a; border-radius: 8px; font-size: 16px; color: #bbb; }
   .starter-benefits .item span { color: #33ccff; margin-right: 8px; font-weight: 700; }
 
   .process { max-width: 720px; margin: 60px auto; }
   .process h3 { font-size: 22px; font-weight: 700; margin-bottom: 36px; text-align: center; letter-spacing: -0.5px; }
   .process-item { display: flex; gap: 22px; margin-bottom: 28px; }
-  .process-item .num { width: 50px; height: 50px; min-width: 50px; border-radius: 50%; background: #111; border: 1px solid #1a1a1a; color: #33ccff; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 20px; }
+  .process-item .num { width: 50px; height: 50px; min-width: 50px; border-radius: 50%; background: #1c1c1c; border: 1px solid #2a2a2a; color: #33ccff; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 20px; }
   .process-item h4 { font-size: 18px; font-weight: 600; margin-bottom: 6px; }
   .process-item p { color: #999; font-size: 16px; line-height: 1.5; }
 
@@ -160,7 +160,7 @@
   /* ===== FAQ ===== */
   .faq { padding: 70px 0; max-width: 720px; margin: 0 auto; }
   .faq h2 { font-size: 28px; font-weight: 700; margin-bottom: 36px; text-align: center; letter-spacing: -0.5px; }
-  .faq-item { margin-bottom: 28px; }
+  .faq-item { margin-bottom: 28px; background: #141414; border: 1px solid #2a2a2a; border-radius: 12px; padding: 24px; }
   .faq-item h4 { font-size: 18px; font-weight: 600; margin-bottom: 8px; }
   .faq-item p { color: #999; font-size: 16px; line-height: 1.6; }
 
